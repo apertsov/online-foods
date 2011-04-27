@@ -1,0 +1,8 @@
+c:\users\zy\documents\visual studio 2010\Projects\Mega_shop_mysql3\Mega_shop_mysql3\bin\Mega_shop_mysql3.dll
+c:\users\zy\documents\visual studio 2010\Projects\Mega_shop_mysql3\Mega_shop_mysql3\bin\Mega_shop_mysql3.pdb
+c:\users\zy\documents\visual studio 2010\Projects\Mega_shop_mysql3\Mega_shop_mysql3\obj\Debug\ResolveAssemblyReference.cache
+c:\users\zy\documents\visual studio 2010\Projects\Mega_shop_mysql3\Mega_shop_mysql3\obj\Debug\Mega_shop_mysql3.dll
+c:\users\zy\documents\visual studio 2010\Projects\Mega_shop_mysql3\Mega_shop_mysql3\obj\Debug\Mega_shop_mysql3.pdb
+D:\Studing\FinalProject\Working\OnlineFoods\Mega_shop_mysql3\obj\Debug\ResolveAssemblyReference.cache
+D:\Studing\FinalProject\Working\OnlineFoods\Mega_shop_mysql3\obj\Debug\Mega_shop_mysql3.dll
+D:\Studing\FinalProject\Working\OnlineFoods\Mega_shop_mysql3\obj\Debug\Mega_shop_mysql3.pdb

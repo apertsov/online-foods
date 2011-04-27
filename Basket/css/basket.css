@@ -1,0 +1,19 @@
+#basket,#basketDialog{
+background-color: #e9594f;
+width:235px;
+-moz-border-radius:8px;
+-khtml-border-radius:8px;
+-webkit-border-radius:8px;
+border-radius:8px;
+border:1px solid black;
+color:Black;
+}
+table#goodsTable, table#goodsTable th, table#goodsTable td{
+border: 1px solid black;			
+}
+#clearBasket, #checkOut {
+display: none;
+}
+.hPb {
+display: none;
+}
