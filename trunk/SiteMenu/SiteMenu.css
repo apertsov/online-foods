@@ -1,0 +1,56 @@
+﻿/* */
+#ddmenu {
+	background:url(~/SiteMenu/images/menubg.gif) repeat-x;
+	margin: 0;
+	padding: 0;
+	height:43px;
+	width:946px;
+}
+	
+#ddmenu li {	
+	float: left;
+	list-style: none;
+	font: 11px Tahoma, Arial;
+}
+
+#ddmenu li a {	
+	background:url(images/top-dotted.gif) right no-repeat;
+	display: block;
+	padding: 5px 12px;
+	text-decoration: none;
+	width: 200px;
+	color: #fff;
+	text-transform:uppercase;
+	white-space: nowrap;
+	text-align:center;
+}
+
+#ddmenu li a:hover {	
+	background: #000 url(images/top-dotted.gif) right no-repeat;
+}
+	
+#ddmenu li ul {	
+	margin: 3px 0 0 10px;
+	padding: 0;
+	position: absolute;
+	visibility: hidden;
+	width:600px;
+}
+
+#ddmenu li ul li {	
+	display:inline;
+}
+
+#ddmenu li ul li a {
+	width: auto;	
+	background: url(images/bottom-dotted.gif) right no-repeat;
+	display: inline;
+	color: #d9d9d9; 
+	font-size: 10px;
+	padding: 3px 10px;
+}
+
+#ddmenu li ul li a:hover {	
+	background: #000 url(images/bottom-dotted.gif) right no-repeat;
+	padding: 3px 10px;
+}
