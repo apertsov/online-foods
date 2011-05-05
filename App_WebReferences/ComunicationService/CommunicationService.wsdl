@@ -49,6 +49,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetOrdersByDate">
+      <soap:operation soapAction="www.koni-group-inc.org/ICommunication/GetOrdersByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderComponents">
+      <soap:operation soapAction="www.koni-group-inc.org/ICommunication/GetOrderComponents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOrders">
+      <soap:operation soapAction="www.koni-group-inc.org/ICommunication/GetPreOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="CommunicationService">
     <wsdl:port name="BasicHttpBinding_ICommunication" binding="tns:BasicHttpBinding_ICommunication">

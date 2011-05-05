@@ -38,6 +38,24 @@
   <wsdl:message name="ICommunication_GetUnservedOrders_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUnservedOrdersResponse" />
   </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrdersByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByDate" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrdersByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrderComponents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderComponents" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrderComponents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetPreOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOrders" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetPreOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOrdersResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICommunication">
     <wsdl:operation name="SubmitOrder">
       <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/SubmitOrder" message="tns:ICommunication_SubmitOrder_InputMessage" />
@@ -58,6 +76,18 @@
     <wsdl:operation name="GetUnservedOrders">
       <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetUnservedOrders" message="tns:ICommunication_GetUnservedOrders_InputMessage" />
       <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetUnservedOrdersResponse" message="tns:ICommunication_GetUnservedOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByDate">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrdersByDate" message="tns:ICommunication_GetOrdersByDate_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrdersByDateResponse" message="tns:ICommunication_GetOrdersByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderComponents">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrderComponents" message="tns:ICommunication_GetOrderComponents_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrderComponentsResponse" message="tns:ICommunication_GetOrderComponents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOrders">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetPreOrders" message="tns:ICommunication_GetPreOrders_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetPreOrdersResponse" message="tns:ICommunication_GetPreOrders_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>
