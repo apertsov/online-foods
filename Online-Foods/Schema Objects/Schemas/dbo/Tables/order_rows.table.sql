@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[order_rows](
+	[id_order_rows] [int] IDENTITY(1,1) NOT NULL,
+	[id_order] [int] NULL,
+	[id_dish] [int] NULL,
+	[count] [decimal](15, 3) NULL,
+ CONSTRAINT [PRIMARY011] PRIMARY KEY CLUSTERED 
+(
+	[id_order_rows] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = OFF, ALLOW_PAGE_LOCKS  = OFF),
+ CONSTRAINT [id_order_rows] UNIQUE NONCLUSTERED 
+(
+	[id_order_rows] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = OFF, ALLOW_PAGE_LOCKS  = OFF)
+)
+
+
