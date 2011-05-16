@@ -70,11 +70,10 @@ public partial class ShowOrders : System.Web.UI.Page
                 
             }
             or = null;
-            or = client.GetPreOrders(DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.ToShortTimeString());
+            or = client.GetPreOrders(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
             if (or != null)
                 for (Int32 i = 0; i < or.Length; i++)
                 {
-                    if (or[i].ExecutionDate != DateTime.Now.Date.ToString("yyyy-MM-dd")) continue;
                     if (String.IsNullOrEmpty(or[i].ExecutionTime)) continue;
                     DataRow dr = null;
                     dr = dt.NewRow();
@@ -194,11 +193,10 @@ public partial class ShowOrders : System.Web.UI.Page
            
         }
         or = null;
-        or = client.GetPreOrders(DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.ToShortTimeString());
+        or = client.GetPreOrders(DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
         if (or != null)
             for (Int32 i = 0; i < or.Length; i++)
             {
-                if (or[i].ExecutionDate != DateTime.Now.Date.ToString("yyyy-MM-dd")) continue;
                 if (String.IsNullOrEmpty(or[i].ExecutionTime)) continue;
                 DataRow dr = null;
                 dr = dt.NewRow();

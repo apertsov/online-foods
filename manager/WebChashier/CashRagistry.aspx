@@ -187,45 +187,8 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </td>
-            <td >
-                <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:DropDownList ID="DropDownList1" runat="server" 
-                            onselectedindexchanged="DropDownList1_SelectedIndexChanged">
-                            <asp:ListItem>Daily</asp:ListItem>
-                            <asp:ListItem>Weekly</asp:ListItem>
-                            <asp:ListItem>Monthly</asp:ListItem>
-                            <asp:ListItem>Yearly</asp:ListItem>
-                        </asp:DropDownList>
-                        &nbsp;<asp:Label ID="Label5" runat="server" Text="Dates"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                        &nbsp;-
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                        <br />
-                        <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Show" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </td>
-            <td >
-                <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:DropDownList ID="DropDownList3" runat="server" 
-                            onselectedindexchanged="DropDownList3_SelectedIndexChanged" 
-                            style="height: 21px">
-                            <asp:ListItem>Daily</asp:ListItem>
-                            <asp:ListItem>Weekly</asp:ListItem>
-                            <asp:ListItem>Monthly</asp:ListItem>
-                            <asp:ListItem>Yearly</asp:ListItem>
-                        </asp:DropDownList>
-                        &nbsp;<asp:Label ID="Label6" runat="server" Text="Dates"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                        &nbsp;-
-                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-                        <br />
-                        <asp:Button ID="Button3" runat="server" onclick="Button3_Click" Text="Show" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </td>
+            
+            
         </tr>
         <tr>
              <td valign="top">
@@ -255,7 +218,58 @@
                      </ContentTemplate>
                  </asp:UpdatePanel>
             </td>
+           
+           
+        </tr>
+        <tr>
             <td valign="top">
+                <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:Label ID="Label7" runat="server"></asp:Label>
+                        <br />
+                        <asp:GridView ID="GridView4" runat="server" BackColor="White" 
+                            BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                            ForeColor="Black" GridLines="Vertical">
+                            <AlternatingRowStyle BackColor="White" />
+                            <FooterStyle BackColor="#CCCC99" />
+                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                            <RowStyle BackColor="#F7F7DE" />
+                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                        </asp:GridView>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+           
+            
+        </tr>
+        <tr>
+        <td >
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:DropDownList ID="DropDownList1" runat="server" 
+                            onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                            <asp:ListItem>Daily</asp:ListItem>
+                            <asp:ListItem>Weekly</asp:ListItem>
+                            <asp:ListItem>Monthly</asp:ListItem>
+                            <asp:ListItem>Yearly</asp:ListItem>
+                        </asp:DropDownList>
+                        &nbsp;<asp:Label ID="Label5" runat="server" Text="Dates"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                        &nbsp;-
+                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                        <br />
+                        <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Show" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+        </tr>
+        <tr>
+         <td valign="top">
                 <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <asp:Label ID="Label2" runat="server" Text="Recieved money" />
@@ -282,7 +296,57 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </td>
-            <td valign="top">
+        </tr>
+
+        <tr>
+         <td valign="top">
+                <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:Label ID="Label8" runat="server"></asp:Label>
+                        <br />
+                        <asp:GridView ID="GridView5" runat="server" BackColor="White" 
+                            BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                            ForeColor="Black" GridLines="Vertical">
+                            <AlternatingRowStyle BackColor="White" />
+                            <FooterStyle BackColor="#CCCC99" />
+                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                            <RowStyle BackColor="#F7F7DE" />
+                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                            <SortedAscendingHeaderStyle BackColor="#848384" />
+                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                            <SortedDescendingHeaderStyle BackColor="#575357" />
+                        </asp:GridView>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+        </tr>
+
+        <tr>
+        <td >
+                <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:DropDownList ID="DropDownList3" runat="server" 
+                            onselectedindexchanged="DropDownList3_SelectedIndexChanged" 
+                            style="height: 21px">
+                            <asp:ListItem>Daily</asp:ListItem>
+                            <asp:ListItem>Weekly</asp:ListItem>
+                            <asp:ListItem>Monthly</asp:ListItem>
+                            <asp:ListItem>Yearly</asp:ListItem>
+                        </asp:DropDownList>
+                        &nbsp;<asp:Label ID="Label6" runat="server" Text="Dates"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                        &nbsp;-
+                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                        <br />
+                        <asp:Button ID="Button3" runat="server" onclick="Button3_Click" Text="Show" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+        </tr>
+        <tr>
+         <td valign="top">
                 <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <asp:Label ID="Label3" runat="server" Text="Lost money" />
@@ -310,51 +374,7 @@
             </td>
         </tr>
         <tr>
-            <td valign="top">
-                <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:Label ID="Label7" runat="server"></asp:Label>
-                        <br />
-                        <asp:GridView ID="GridView4" runat="server" BackColor="White" 
-                            BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
-                            ForeColor="Black" GridLines="Vertical">
-                            <AlternatingRowStyle BackColor="White" />
-                            <FooterStyle BackColor="#CCCC99" />
-                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                            <RowStyle BackColor="#F7F7DE" />
-                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                            <SortedAscendingHeaderStyle BackColor="#848384" />
-                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                            <SortedDescendingHeaderStyle BackColor="#575357" />
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </td>
-            <td valign="top">
-                <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:Label ID="Label8" runat="server"></asp:Label>
-                        <br />
-                        <asp:GridView ID="GridView5" runat="server" BackColor="White" 
-                            BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
-                            ForeColor="Black" GridLines="Vertical">
-                            <AlternatingRowStyle BackColor="White" />
-                            <FooterStyle BackColor="#CCCC99" />
-                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                            <RowStyle BackColor="#F7F7DE" />
-                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                            <SortedAscendingHeaderStyle BackColor="#848384" />
-                            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                            <SortedDescendingHeaderStyle BackColor="#575357" />
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </td>
-            <td valign="top">
+        <td valign="top">
                 <asp:UpdatePanel ID="UpdatePanel10" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <asp:Label ID="Label9" runat="server"></asp:Label>
@@ -377,7 +397,9 @@
                 </asp:UpdatePanel>
             </td valign="top">
         </tr>
+
     </table>
+
     </div>
 
 </asp:Content>
