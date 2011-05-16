@@ -1,7 +1,17 @@
 ﻿
 /* DEFAULTS
 ----------------------------------------------------------*/
-
+#dishBox{
+width:160px;
+background-color: #b05757;
+-moz-border-radius:8px;
+-khtml-border-radius:8px;
+-webkit-border-radius:8px;
+border-radius:8px;
+border:1px solid black;
+color:Black;
+}
+/**/
 body   
 {
     background: #b6b7bc;

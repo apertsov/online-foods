@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="www.koni-group-inc.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="www.koni-group-inc.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="www.koni-group-inc.org/Imports">
+      <xsd:import namespace="www.koni-group-inc.org" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://koni-group-inc.org" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommunication_SubmitOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOrder" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_SubmitOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetNewOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrders" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetNewOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetState" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_SetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetState" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_SetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetUnservedOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnservedOrders" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetUnservedOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnservedOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrdersByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByDate" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrdersByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrderComponents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderComponents" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetOrderComponents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetPreOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOrders" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetPreOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoods" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetGoodById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodById" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetGoodById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_ChangeGood_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeGood" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_ChangeGood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeGoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_BuyGoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyGoods" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_BuyGoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetRecievedMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecievedMoney" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetRecievedMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecievedMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetSpentMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpentMoney" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetSpentMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpentMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetLostMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLostMoney" />
+  </wsdl:message>
+  <wsdl:message name="ICommunication_GetLostMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLostMoneyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommunication">
+    <wsdl:operation name="SubmitOrder">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/SubmitOrder" message="tns:ICommunication_SubmitOrder_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/SubmitOrderResponse" message="tns:ICommunication_SubmitOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrders">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetNewOrders" message="tns:ICommunication_GetNewOrders_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetNewOrdersResponse" message="tns:ICommunication_GetNewOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetState" message="tns:ICommunication_GetState_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetStateResponse" message="tns:ICommunication_GetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetState">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/SetState" message="tns:ICommunication_SetState_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/SetStateResponse" message="tns:ICommunication_SetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnservedOrders">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetUnservedOrders" message="tns:ICommunication_GetUnservedOrders_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetUnservedOrdersResponse" message="tns:ICommunication_GetUnservedOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByDate">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrdersByDate" message="tns:ICommunication_GetOrdersByDate_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrdersByDateResponse" message="tns:ICommunication_GetOrdersByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderComponents">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrderComponents" message="tns:ICommunication_GetOrderComponents_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetOrderComponentsResponse" message="tns:ICommunication_GetOrderComponents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOrders">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetPreOrders" message="tns:ICommunication_GetPreOrders_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetPreOrdersResponse" message="tns:ICommunication_GetPreOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoods">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetGoods" message="tns:ICommunication_GetGoods_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetGoodsResponse" message="tns:ICommunication_GetGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodById">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetGoodById" message="tns:ICommunication_GetGoodById_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetGoodByIdResponse" message="tns:ICommunication_GetGoodById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeGood">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/ChangeGood" message="tns:ICommunication_ChangeGood_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/ChangeGoodResponse" message="tns:ICommunication_ChangeGood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyGoods">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/BuyGoods" message="tns:ICommunication_BuyGoods_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/BuyGoodsResponse" message="tns:ICommunication_BuyGoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecievedMoney">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetRecievedMoney" message="tns:ICommunication_GetRecievedMoney_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetRecievedMoneyResponse" message="tns:ICommunication_GetRecievedMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpentMoney">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetSpentMoney" message="tns:ICommunication_GetSpentMoney_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetSpentMoneyResponse" message="tns:ICommunication_GetSpentMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLostMoney">
+      <wsdl:input wsaw:Action="www.koni-group-inc.org/ICommunication/GetLostMoney" message="tns:ICommunication_GetLostMoney_InputMessage" />
+      <wsdl:output wsaw:Action="www.koni-group-inc.org/ICommunication/GetLostMoneyResponse" message="tns:ICommunication_GetLostMoney_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

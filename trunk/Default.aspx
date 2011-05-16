@@ -1,163 +1,80 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Mega_shop_mysql3._Default" %>
 <%@ Register Namespace="TreeViewBinding" TagPrefix="user"  %>
-   
+<%@ Register src="~/Controls/WebUserControl.ascx" TagName="dishPanel" TagPrefix="dish" %>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
-    <!-- Basket links -->
-    <!-- End Basket Links -->
-   <script type="text/javascript">
-        
-   // Simply changes the information 
-
-   // in the display text boxes to 
-
-   // demonstrate how to obtain meta-data 
-
-   // from the selected node's 
-
-   // NodeData property on the client.
-
-   //sss
-
-   function DishGroupClick()
-   {
-       var treeNode = GetSelectedNode();
-       window.alert("!!!");
-       if ( null == treeNode || undefined == treeNode )
-       {
-           return;
-       }     
-       
-       var nodeData = 
-          treeNode.getAttribute( 'nodeData' ).split( ';' );          
-           
-       var id = GetKeyValue( 'id_dish_group' );
-       var name = GetKeyValue( 'name' );
-   }
-   
-   // Gets the value of the searchKey 
-
-   // from the NodeData of a TreeNode.
-
-   //
-
-   function GetKeyValue( searchKey )
-   {   
-       // Get a handle to the selected TreeNode.
-
-       var treenode = GetSelectedNode();
-     
-       // Validate the node handle.
-
-       if ( null == treenode || undefined == treenode )
-           return null;
-   
-       // Get the node's NodeData property's value.
-
-       var nodeDataAry = treenode.getAttribute( 'nodeData' );
-   
-       if ( null == nodeDataAry || undefined == nodeDataAry )
-           return null;
-    
-       nodeDataAry = nodeDataAry.split( ';' );
-   
-       if ( null == nodeDataAry || undefined == nodeDataAry || 
-         0 >= nodeDataAry.length )
-           return null;
-    
-       var count = 0;
-       var returnValue = null;
-   
-       while ( count < nodeDataAry.length )
-       {
-           var workingItem = nodeDataAry[ count ];
-    
-           if ( 0 >= workingItem.length )
-           {
-               count++;
-               continue;
-           }
-     
-           // Split the string into its key value pairs.
-
-           var kv = workingItem.split( '=' );
-   
-           if ( 1 >= kv.length )
-           {
-               count++;
-               continue;
-           }
-     
-           var key = kv[ 0 ];
-           var kValue = kv[ 1 ];
-   
-           if ( key != searchKey )
-           {
-               count++;
-               continue;
-           }
-   
-           returnValue = kValue;
-           break;
-       }       
-    
-       return returnValue;
-   }
-    
-   // Gets a handle to the TreeView.
-
-   //
-
-   function GetTreeHandle()
-   {
-       var tree;
-       var treeName = 'MainContent_DishGroupsTreeView_DishGroupTreeView';
-      
-       // Get a handle to the TreeView.
-
-       tree = document.getElementById( treeName );
-   
-       if ( null == tree || undefined == tree )
-           return null;
-   
-       return tree;
-   }     
-   
-   // Gets a handle to the TreeView's selected node.
-
-   //
-
-   function GetSelectedNode()
-   {
-       var tree = GetTreeHandle();
-       var treeNode;
-   
-       if ( null == tree || undefined == tree )
-           return null;
-   
-       treeNode = tree.getTreeNode( tree.selectedNodeIndex );  
-    
-       if ( null == treeNode || undefined == treeNode )
-           return null;
-   
-       return treeNode;
-   }   
-    </script>
-    
+	<script type="text/javascript">
+	    
+	    function createAjaxRequest() {
+	        var httpRequest;
+	        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+	            httpRequest = new XMLHttpRequest();
+	            if (httpRequest.overrideMimeType) {
+	                httpRequest.overrideMimeType('text/xml');
+	            }
+	        }
+	        else if (window.ActiveXObject) { // IE
+	            try {
+	                httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	            }
+	            catch (e) {
+	                try {
+	                    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	                }
+	                catch (e) { }
+	            }
+	        }
+	        return httpRequest;
+	    }
+	    //
+	    // Here is an instance method that computes a circle's area.
+	    function getInfo(id_group) {
+	        var request = createAjaxRequest();
+            var serviceUrl = "Handler/LoadDishsByGroup.ashx?id_group=";
+	        request.open("GET", serviceUrl + id_group, true);
+	        request.onreadystatechange = function () {
+	            if (request.readyState == 4) {
+	                if (request.status == 200) {
+	                    $("#resultContainer").html(this.responseText);
+	                    }
+	                } else{
+	                    }
+	            }
+	        request.send(null);
+	    }
+	        
+   </script>
 <table class="main-content">
 <tr>
 <td class="left-column">
-   <user:DishGroupsTreeView ID="DishGroupsTreeView" runat="server" />
+  <user:DishGroupsTreeView ID="DishGroupsTreeView" runat="server" />
 </td>
 <td class="centr-column">
 <div id="temp">
-			Товари:<br />
-			<a id="good-2356-500" href="#" class="addCart">Супер піца</a> 500 грн<br/> 
-			<a id="good-23586-300" href="#" class="addCart">Супер пиво</a> 300 грн<br/> 
-			<a id="good-2357-700" href="#" class="addCart">Супер серветки</a> 700 грн<br/>  
+			<asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <br />
+            <asp:UpdatePanel ID="DishsUpdatePanel" runat="server" >
+            <ContentTemplate>
+                <asp:PlaceHolder ID="DishsPlaceHolder" runat="server" 
+                   >
+                </asp:PlaceHolder>
+            </ContentTemplate>
+            </asp:UpdatePanel>
+			Страви:<br />
+            <div id="resultContainer">
+            <dish:dishPanel ID="Dish1" runat="server" dish_id=1 />
+            <dish:dishPanel ID="Dish2" runat="server" dish_id=2 />
+            <dish:dishPanel ID="Dish3" runat="server" dish_id=3 />
+            //
+			<a id="good-1-300" href="#" class="addCart">Супер пивоer" dish_id=3 />
+            //
+			<a id="good-2-300" href="#" class="addCart">Супер пиво</a> 300 грн<br/> 
+			<a id="good-3-700" href="#" class="addCart">Супер серветки</a> 700 грн<br/>  
+            </div>
+			
 		</div> 
         <script type="text/javascript">
             $(document).ready(function (){ 

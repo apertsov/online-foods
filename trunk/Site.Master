@@ -1,19 +1,18 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Mega_shop_mysql3.SiteMaster" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
     <title></title>
-    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
-    <link href="SiteMenu/SiteMenu.css" rel="stylesheet" type="text/css" />
+    <link href="/WebProject/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/WebProject/SiteMenu/SiteMenu.css" rel="stylesheet" type="text/css" />
     <!-- Basket links -->
-        <script type="text/javascript" src="Basket/js/jquery-1.5.2.min.js"></script> 
-		<script type="text/javascript" src="Basket/js/jquery.jgrowl.js"></script> 
-		<link href="Basket/css/jquery.jgrowl.css" rel="stylesheet" type="text/css"/>
-		<script type="text/javascript" src="Basket/js/jquery.cookie.js"></script> 
-		<link href="Basket/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-		<script type="text/javascript" src="Basket/js/jquery-ui.min.js"></script>
-		<link href="Basket/css/basket.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="/WebProject/Basket/js/jquery-1.5.2.min.js"></script> 
+		<script type="text/javascript" src="/WebProject/Basket/js/jquery.jgrowl.js"></script> 
+		<link href="/WebProject/Basket/css/jquery.jgrowl.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="/WebProject/Basket/js/jquery.cookie.js"></script> 
+		<link href="/WebProject/Basket/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="/WebProject/Basket/js/jquery-ui.min.js"></script>
+		<link href="/WebProject/Basket/css/basket.css" rel="stylesheet" type="text/css"/>
     <!-- End Basket Links --> 
     <!-- Site header menu -->
     <script type="text/javascript">
@@ -86,7 +85,7 @@
         <tr>
         <td class="left-column">
         </td>
-        <td class="centr-column">        	
+        <td class="centr-column">       	
         <div id="basketDialog" title="Кошик товарів">
 			    <table id="goodsTable">				
 			    </table>
@@ -96,7 +95,7 @@
 			<table id="bTable" > 
 				<tbody>
 					<tr class="hPb"> 
-						<td rowspan="3"><img id="imagebasket" alt="" src="Basket/images/basket-full-64.png" /></td>
+						<td rowspan="3"><img id="imagebasket" alt="" src="/WebProject/Basket/images/basket-full-64.png" /></td>
 						<td>Вибрано:</td> 
 						<td><span id="totalGoods">0</span> шт</td> 
 					</tr> 
@@ -105,7 +104,7 @@
 						<td><span id="totalPrice">0</span> грн</td> 
 					</tr> 
 					<tr class="hPe"> 
-						<td><img alt="" id="emptybasket" src="Basket/images/basket-empty-64.png" /></td>
+						<td><img alt="" id="emptybasket" src="/WebProject/Basket/images/basket-empty-64.png" /></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;Кошик пустий</td> 
 					</tr> 
 					<tr> 
@@ -113,7 +112,7 @@
                             <a id="clearBasket" href="#">Очистити</a>
                         </td> 
 						<td>
-                            <a id="checkOut" href="SendOrder.aspx">Оформити</a>
+                            <a id="checkOut" href="/WebProject/SendOrder.aspx">Оформити</a>
                         </td> 
                         <td></td>
 					</tr> 
@@ -124,12 +123,23 @@
         </tr>
         </table>
         <ul id="ddmenu">
+            <li>
+                <a href="/WebProject/manager/ShowOrders.aspx">Менеджер</a>
+                <ul>
+                <li><a href="/WebProject/manager/WebManager/ShowOrders.aspx">Переглянути замолвення</a></li>
+                <li><a href="/WebProject/manager/WebManager/AllOrders.aspx">Всі замовлення</a></li>
+                <li><a href="/WebProject/manager/WebStockManager/AllGoodsaspx.aspx">Товари</a></li>
+                <li><a href="/WebProject/manager/WebChashier/CashRagistry.aspx">Готівка</a></li>
+                <li><a href="/WebProject/manager/WebKitchen/AllOrders.aspx">Кухня</a></li>
+                </ul>
+            </li>
 			<li><a href="#">Страви</a>
 				<ul>
-					<li><a href="#">Пошук</a></li>
-					<li><a href="SendOrder.aspx">Оформити замовлення</a></li>
+					<li><a href="/WebProject/Search_v1/search.aspx">Пошук</a></li>
+					<li><a href="/WebProject/SendOrder.aspx">Оформити замовлення</a></li>
 					<li><a href="#">Страва на змовлення</a></li>
 					<li><a href="#">Топ страв</a></li>
+                    <li><a href="/WebProject/manager/CreateFood.aspx">Створити страву</a></li>
 				</ul>
 				
 			</li>
@@ -139,13 +149,15 @@
 					<li><a href="#">Рецепт дня</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Куток поживача</a>
+			<li><a href="#">Куток споживача</a>
 				<ul>
-					<li><a href="#">Звяжіться з нами1</a></li>
-					<li><a href="About.aspx">Про нас</a></li>
+					<li><a href="#">Зв'яжіться з нами</a></li>
+					<li><a href="/WebProject/About.aspx">Про нас</a></li>
 				</ul>
 			</li>
-			<li><a href="Default.aspx">Головна</a></li>
+			<li><a href="/WebProject/MainPage.aspx">Головна</a></li>
+            
+            
 		</ul>
        </div>
        <div>

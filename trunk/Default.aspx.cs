@@ -16,23 +16,18 @@ namespace Mega_shop_mysql3
 {
     public partial class _Default : System.Web.UI.Page
     {
-        protected System.Web.UI.WebControls.TreeView DishGroupstvControl;
-        protected void GroupsTreeView_Load(object sender, EventArgs e)
-        {
-
-        }
-        //
-        private string mySQLConnectionString = @"Server=localhost;Database=online_foods;Uid=root;Pwd=;";
         private DataSet GetDataSet()
         {
+            string mySQLConnectionString = @"Server=localhost;Database=online_foods;Uid=root;Pwd=;";
+            string localBaseConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\data\online_foods.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
             string sql = "SELECT * FROM dish_groups";
-            using (MySqlConnection mySQLConnection = new MySqlConnection())
+            using (SqlConnection mySQLConnection = new SqlConnection())
             {
                 mySQLConnection.ConnectionString = mySQLConnectionString;
-                using (MySqlCommand Command = new MySqlCommand(sql, mySQLConnection))
+                using (SqlCommand Command = new SqlCommand(sql, mySQLConnection))
                 {
                     mySQLConnection.Open();
-                    using (MySqlDataReader myReader = Command.ExecuteReader())
+                    using (SqlDataReader myReader = Command.ExecuteReader())
                     {
                         DataTable table = new DataTable();
                         DataSet dataSet = new DataSet();
@@ -47,18 +42,10 @@ namespace Mega_shop_mysql3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            String[] request = Request.QueryString.AllKeys;
-            DishGroupstvControl = new TreeView();
-            TreeNodeBinding nodeBinding = new TreeNodeBinding();
-            nodeBinding.DataMember = "System.Data.DataRowView";
-            nodeBinding.TextField = "name";
-            nodeBinding.ValueField = "id_dish_group";
-            DishGroupstvControl.ID = "DishGroupTreeView";
-            DishGroupstvControl.DataBindings.Add(nodeBinding);
-            DishGroupstvControl.DataSource = new HierarchicalDataSet(GetDataSet(), "id_dish_group", "id_owner_group");
-            DishGroupstvControl.DataBind();
-            this.Controls.Add(DishGroupstvControl);
-            Console.Write("!");
+            
         }
+        //
+
+        //
     }
 }

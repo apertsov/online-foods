@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adc74b71-b15a-4e91-b60e-1e81a9fdbad9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://online-foods.somee.com/service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="49ab5d83-1e91-40f5-a1b5-b436f680a441" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="59db8092-7b03-4528-b062-5c4c3dc1e258" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommunicationService.wsdl" MetadataType="Wsdl" ID="586524c7-266f-4bdf-97d4-b37bd4fc8069" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?wsdl" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="50cd1e5f-5546-4f1c-a5d3-7fae88aa5554" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="e6cdf0d1-e8e7-4ff3-bf3d-7ad011bcd1cb" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="777f2cff-97de-477f-a885-53d9d0d7809c" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="5c2f76b4-e581-47a9-a5b3-507438f62e05" SourceId="1" SourceUrl="http://online-foods.somee.com/Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
