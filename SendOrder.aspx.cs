@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class SendOrder : System.Web.UI.Page
 {
-    ComunicationService.CommunicationClient client = new ComunicationService.CommunicationClient();
+    CommunicationService.CommunicationClient client = new CommunicationService.CommunicationClient();
     Dictionary<String, String> dishes = new Dictionary<string, string>();
     private static String order_id = "0";
     protected void Page_Load(object sender, EventArgs e)
@@ -17,7 +17,7 @@ public partial class SendOrder : System.Web.UI.Page
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
-        ComunicationService.Order order = new ComunicationService.Order();
+        CommunicationService.Order order = new CommunicationService.Order();
         order.Addres = TextBox1.Text;
         order.Phone = TextBox2.Text;
         order.OrderDate = DateTime.Now.Date.ToString("yyyy-MM-dd");
@@ -41,6 +41,7 @@ public partial class SendOrder : System.Web.UI.Page
             order.Info = null;
         else
             order.Info = TextBox7.Text;
+        //
         if (Request.Cookies["basket"] != null)
         {
             HttpCookie aCookie = Request.Cookies["basket"];
@@ -49,15 +50,19 @@ public partial class SendOrder : System.Web.UI.Page
             foreach (String dishOrder in values)
             if (dishOrder.Length>0)
             {
-                
                 String[] param = dishOrder.Split(':');
-                dishes.Add(param[0], param[1]);
+                string value = "";
+                if (dishes.TryGetValue(param[0], out value))
+                {
+                    int dishCount = int.Parse(value) + int.Parse(param[1]);
+                    dishes[param[0]] = dishCount.ToString();
+                }
+                else dishes.Add(param[0], param[1]);
             }
         }       
         //dishes.Add("2", "3");
         order.DishCount = dishes;
             order_id = client.SubmitOrder(order);
-        
         HttpCookie aCookieDel;
         string cookieName;
         int limit = Request.Cookies.Count;
@@ -77,8 +82,15 @@ public partial class SendOrder : System.Web.UI.Page
         TextBox6.Enabled = false;
         TextBox7.Enabled = false;
         Button1.Visible  = false;
+        //Control OrderStateControl = LoadControl("~/Controls/OrderState.ascx");
+        /*
+        Controls_OrderState OrderStateControl = (Controls_OrderState)LoadControl("~/Controls/OrderState.ascx");
+        OrderStateControl.ID = "StateControl-" + order_id;
+
+        OrderStateControl.OrderID = Convert.ToInt16(order_id);
+        PlaceHolder1.Controls.Add(OrderStateControl);
+         */
         CheckStateTimer.Enabled = true;
-        //
     }
     protected void btnCheck_Click(object sender, EventArgs e)
     {
@@ -91,7 +103,7 @@ public partial class SendOrder : System.Web.UI.Page
             case 2: strState = "Відправка"; break;
             case -1: strState = "Доставлено"; break;
         }
-        lbStatus.Text = strState;
+        textbox.Text = strState;
     }
     protected void CheckStateTimer_Tick(object sender, EventArgs e)
     {
@@ -104,6 +116,6 @@ public partial class SendOrder : System.Web.UI.Page
             case 2: strState = "Відправка"; break;
             case -1: strState = "Доставлено"; break;
         }
-        lbStatus.Text = strState;
+        textbox.Text = strState;
     }
 }

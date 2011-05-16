@@ -9,9 +9,8 @@
 
 namespace Mega_shop_mysql3
 {
-
-
     public partial class _Default
     {
+        protected global::System.Web.UI.WebControls.PlaceHolder DishsPlaceHoler;
     }
 }

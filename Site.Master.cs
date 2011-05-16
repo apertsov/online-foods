@@ -11,7 +11,7 @@ namespace Mega_shop_mysql3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
