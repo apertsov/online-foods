@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7d59a1e9-60c3-4724-b5eb-1bc17272ba96" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15e90ae0-a5aa-4c3f-a217-ccb14928932b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,12 +21,12 @@
     <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="www.koni-group-inc.org.wsdl" MetadataType="Wsdl" ID="e5642dbe-e009-4ade-8042-b236934cbcd9" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a31dcd82-bf5d-46e7-818e-1a62cf97a26b" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
-    <MetadataFile FileName="www.koni-group-inc.org.xsd" MetadataType="Schema" ID="6c6ee5c5-e28b-48e2-92d2-5e0a8f4a4121" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1544ec30-733d-479d-b3a8-d09931b83f77" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
-    <MetadataFile FileName="koni-group-inc.org.xsd" MetadataType="Schema" ID="5849a5d9-3a0d-4c0d-922b-3f7ceeacbf7e" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="616ccf22-99a5-4553-b92d-c8898366003e" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="www.koni-group-inc.org.wsdl" MetadataType="Wsdl" ID="8327434c-d7ae-4e62-a894-ceaf990334b0" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="58ec6771-6204-42cd-8096-25342d13fe38" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="www.koni-group-inc.org.xsd" MetadataType="Schema" ID="6be5685e-1242-4bee-ab32-51c050898728" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="82fe0485-2adf-4618-855f-0af9f5ad6514" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="koni-group-inc.org.xsd" MetadataType="Schema" ID="91fa522d-a8d3-459b-a2c5-6f8616d88e84" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="01be9420-af0e-4281-9572-1d849b28c6d2" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/Communication/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
