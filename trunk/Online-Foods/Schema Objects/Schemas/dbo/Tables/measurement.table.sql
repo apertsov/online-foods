@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[measurement](
+	[id_measurement] [int] IDENTITY(1,1) NOT NULL,
+	[full_name] [nvarchar](45) COLLATE Ukrainian_CI_AS NULL,
+	[short_name] [nvarchar](45) COLLATE Ukrainian_CI_AS NULL,
+ CONSTRAINT [PRIMARY009] PRIMARY KEY CLUSTERED 
+(
+	[id_measurement] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = OFF, ALLOW_PAGE_LOCKS  = OFF),
+ CONSTRAINT [id_measurement] UNIQUE NONCLUSTERED 
+(
+	[id_measurement] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = OFF, ALLOW_PAGE_LOCKS  = OFF)
+)
+
+
