@@ -1,6 +1,20 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeBehind="Register.aspx.cs" Inherits="Mega_shop_mysql3.Account.Register" %>
 
+<script runat="server">
+
+    protected void RegisterUser_CreatedUser(object sender, EventArgs e)
+    {
+        FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
+
+        string continueUrl = RegisterUser.ContinueDestinationPageUrl;
+        if (String.IsNullOrEmpty(continueUrl))
+        {
+            continueUrl = "~/Account/addAddress.aspx";
+        }
+        Response.Redirect(continueUrl);
+    }
+</script>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">

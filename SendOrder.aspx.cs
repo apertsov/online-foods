@@ -4,15 +4,36 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Web.Security;
+using MySql.Web.Profile;
+using MySql.Data.MySqlClient;
+using System.Web.Security;
+
 
 public partial class SendOrder : System.Web.UI.Page
 {
     CommunicationService.CommunicationClient client = new CommunicationService.CommunicationClient();
     Dictionary<String, String> dishes = new Dictionary<string, string>();
     private static String order_id = "0";
+    
     protected void Page_Load(object sender, EventArgs e)
     {
+        MembershipUser user = Membership.GetUser();
 
+        if (user != null)
+        {
+            //Response.Write(user.ProviderUserKey);
+            txt.Text = user.ProviderUserKey.ToString();
+
+            TextBox1.Text = GridView1.Rows[0].Cells[1].Text;
+            TextBox2.Text = GridView1.Rows[0].Cells[3].Text;
+            TextBox7.Text = GridView1.Rows[0].Cells[4].Text;
+        }
+        else
+        {
+            Response.Write("ви не авторизовані");
+        }
+                
     }
 
     protected void Button1_Click1(object sender, EventArgs e)

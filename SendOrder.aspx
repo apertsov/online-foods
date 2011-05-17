@@ -262,5 +262,31 @@
             </ContentTemplate>
 </asp:UpdatePanel> 
 </td>
-</div>    
+
+    <asp:Label ID="txt" runat="server" Text="" Visible="false"></asp:Label>
+
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        DataSourceID="SqlDataSource1" Visible="False">
+    <Columns>
+        <asp:BoundField DataField="IdUser" HeaderText="IdUser" 
+            SortExpression="IdUser" />
+        <asp:BoundField DataField="Address" HeaderText="Address" 
+            SortExpression="Address" />
+        <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+        <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+        <asp:BoundField DataField="Info" HeaderText="Info" SortExpression="Info" />
+    </Columns>
+</asp:GridView>
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:food_usersConnectionString %>" 
+        ProviderName="<%$ ConnectionStrings:food_usersConnectionString.ProviderName %>" 
+        SelectCommand="SELECT * FROM my_Address"
+        FilterExpression="IdUser='{0}'">
+                <FilterParameters>
+                    <asp:ControlParameter Name="IdUser" ControlId="txt" PropertyName="text"/>
+                </FilterParameters>
+    </asp:SqlDataSource>
+</div> 
+   
 </asp:Content>
