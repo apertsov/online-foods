@@ -86,10 +86,26 @@
         <td class="left-column">
         </td>
         <td class="centr-column">       	
-        <div id="basketDialog" title="Кошик товарів">
-			    <table id="goodsTable">				
-			    </table>
-		    </div></td>
+            <div id="basketDialog" title="Кошик товарів">
+			        <table id="goodsTable">				
+			        </table>
+		    </div>
+            <div id="basketCountDialog" title="Оберіть кількість">
+			<input type="hidden" id="idInfo">
+			<table id="goodsCountTable">				
+				<tr>
+					<td>Товар:</td>
+					<td><span id="goodNameCd"></span></td>
+				</tr><tr>
+					<td>Кількість:</td>
+					<td><input id="goodCount" size="10"/></td>
+				</tr><tr>
+					<td><a id="basketCountDialogOK" href="#" class="bcdOK">ОК</a></td>
+					<td><a id="basketCountDialogCancel" href="#" class="bcdCancel">Не замовляти</a></td>
+				</tr>				
+			</table>
+		</div>
+        </td>
         <td class="right-column">
            <div id="basket"> 
 			<table id="bTable" > 
